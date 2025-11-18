@@ -1,14 +1,16 @@
 package modelos;
 
 public class Empleado {
+	private int idEmpleado;
 	private String dni;
 	private String nombre;
 	private String puesto;
 	private double salario;
 	private int id_proyecto;
 	
-	public Empleado(String dni, String nombre, String puesto, double salario, int id_proyecto) {
+	public Empleado(int idEmpleado, String dni, String nombre, String puesto, double salario, int id_proyecto) {
 		super();
+		this.idEmpleado = idEmpleado;
 		this.dni = dni;
 		this.nombre = nombre;
 		this.puesto = puesto;
@@ -18,6 +20,14 @@ public class Empleado {
 
 	public Empleado() {
 		super();
+	}
+
+	public int getIdEmpleado() {
+		return idEmpleado;
+	}
+
+	public void setIdEmpleado(int idEmpleado) {
+		this.idEmpleado = idEmpleado;
 	}
 
 	public String getDni() {
