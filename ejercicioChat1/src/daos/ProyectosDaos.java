@@ -104,4 +104,9 @@ public class ProyectosDaos {
 		ps.executeUpdate();
 		ps.close();
 	}
+	
+	//Metodo para cerrar el programa
+	public void cerrarPrograma() throws SQLException {
+		con.close();
+	}
 }

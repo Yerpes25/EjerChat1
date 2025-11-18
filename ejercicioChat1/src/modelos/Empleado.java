@@ -1,7 +1,7 @@
 package modelos;
 
 public class Empleado {
-	private int idEmpleado;
+	private int id_Empleado;
 	private String dni;
 	private String nombre;
 	private String puesto;
@@ -10,7 +10,7 @@ public class Empleado {
 	
 	public Empleado(int idEmpleado, String dni, String nombre, String puesto, double salario, int id_proyecto) {
 		super();
-		this.idEmpleado = idEmpleado;
+		this.id_Empleado = idEmpleado;
 		this.dni = dni;
 		this.nombre = nombre;
 		this.puesto = puesto;
@@ -23,11 +23,11 @@ public class Empleado {
 	}
 
 	public int getIdEmpleado() {
-		return idEmpleado;
+		return id_Empleado;
 	}
 
 	public void setIdEmpleado(int idEmpleado) {
-		this.idEmpleado = idEmpleado;
+		this.id_Empleado = idEmpleado;
 	}
 
 	public String getDni() {
@@ -72,9 +72,7 @@ public class Empleado {
 
 	@Override
 	public String toString() {
-		return "Empleado [dni=" + dni + ", nombre=" + nombre + ", puesto=" + puesto + ", salario=" + salario
-				+ ", id_proyecto=" + id_proyecto + "]";
+		return "Empleado [id_Empleado=" + id_Empleado + ", dni=" + dni + ", nombre=" + nombre + ", puesto=" + puesto
+				+ ", salario=" + salario + ", id_proyecto=" + id_proyecto + "]";
 	}
-	
-	
 }
