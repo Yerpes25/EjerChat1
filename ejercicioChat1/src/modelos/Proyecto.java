@@ -1,15 +1,15 @@
 package modelos;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Proyecto {
 	private int id_proyecto;
 	private String nombre;
 	private String cliente;
-	private Date f_inicio;
+	private LocalDate f_inicio;
 	private double presupuesto;
 	
-	public Proyecto(int id_proyecto, String nombre, String cliente, Date f_inicio, double presupuesto) {
+	public Proyecto(int id_proyecto, String nombre, String cliente, LocalDate f_inicio, double presupuesto) {
 		super();
 		this.id_proyecto = id_proyecto;
 		this.nombre = nombre;
@@ -46,11 +46,11 @@ public class Proyecto {
 		this.cliente = cliente;
 	}
 
-	public Date getF_inicio() {
+	public LocalDate getF_inicio() {
 		return f_inicio;
 	}
 
-	public void setF_inicio(Date f_inicio) {
+	public void setF_inicio(LocalDate f_inicio) {
 		this.f_inicio = f_inicio;
 	}
 

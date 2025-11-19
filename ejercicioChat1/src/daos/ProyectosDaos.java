@@ -38,7 +38,7 @@ public class ProyectosDaos {
 		ps.setInt(1, p.getId_proyecto());
 		ps.setString(2, p.getNombre());
 		ps.setString(3, p.getCliente());
-		ps.setDate(4, p.getF_inicio());
+		ps.setDate(4,java.sql.Date.valueOf(p.getF_inicio()));
 		ps.setDouble(5, p.getPresupuesto());
 		
 		ps.executeUpdate();
@@ -58,7 +58,7 @@ public class ProyectosDaos {
 			}
 			
 			result.add(new Proyecto(rs.getInt("id_proyecto"), rs.getString("nombre"), rs.getString("cliente"), 
-					rs.getDate("f_inicio"), rs.getDouble("presupuesto")));
+					rs.getDate("f_inicio").toLocalDate(), rs.getDouble("presupuesto")));
 		}
 		
 		rs.close();
@@ -75,7 +75,7 @@ public class ProyectosDaos {
 		Proyecto p = null;
 		if(rs.next()) {
 			p = new Proyecto(rs.getInt("id_proyecto"), rs.getString("nombre"), rs.getString("cliente"), 
-					rs.getDate("f_inicio"), rs.getDouble("presupuesto"));
+					rs.getDate("f_inicio").toLocalDate(), rs.getDouble("presupuesto"));
 		}
 		
 		rs.close();
